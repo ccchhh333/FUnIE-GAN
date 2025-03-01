@@ -1,7 +1,7 @@
 
 # dataset info
 dataset_name: "UFO-120" 
-dataset_path: "/mnt/data1/ImageSR/UFO-120/train_val/"
+dataset_path: "/kaggle/input/orgdata/orgdata/"
 
 # image info
 chans: 3
