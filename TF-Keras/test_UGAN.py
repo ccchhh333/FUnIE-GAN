@@ -16,6 +16,7 @@ from scipy import misc
 import tensorflow as tf
 #export TF_CPP_MIN_LOG_LEVEL=2
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
+tf.compat.v1.disable_v2_behavior()
 
 # local imports
 sys.path.insert(0, 'nets/')
@@ -41,7 +42,7 @@ if NETWORK == 'resnet': from resnet import *
 # global step that is saved with a model to keep track of how many steps/epochs
 global_step = tf.Variable(0, name='global_step', trainable=False)
 # underwater image
-image_u = tf.placeholder(tf.float32, shape=(1, 256, 256, 3), name='image_u')
+image_u = tf.compat.v1.placeholder(tf.float32, shape=(1, 256, 256, 3), name='image_u')
 # generated corrected colors
 gen_image  = netG(image_u)
 
