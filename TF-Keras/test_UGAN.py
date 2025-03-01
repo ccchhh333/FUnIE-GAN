@@ -23,7 +23,7 @@ import numpy as np
 from utils.data_utils import getPaths, read_and_resize, preprocess
 
 # test set directories
-data_dir = "../data/test/A/"
+data_dir = "/kaggle/input/orgdata/orgdata "
 test_paths = getPaths(data_dir)
 print ("{0} test images are loaded".format(len(test_paths)))
 
@@ -53,7 +53,7 @@ sess.run(init)
 # restore model
 ckpt = tf.train.get_checkpoint_state(checkpoint_dir)
 if ckpt and ckpt.model_checkpoint_path:
-    print "Restoring previous model..."
+    print ("Restoring previous model...")
     try:
         saver.restore(sess, ckpt.model_checkpoint_path)
         print ("Model restored")
