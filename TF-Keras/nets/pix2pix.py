@@ -3,7 +3,7 @@
 #    - Original repo: github.com/cameronfabbri/Underwater-Color-Correction
 """
 import tensorflow as tf
-import tensorflow.contrib.layers as tcl
+import tf_slim as tcl
 from tensorflow.nn import relu, tanh
 
 
